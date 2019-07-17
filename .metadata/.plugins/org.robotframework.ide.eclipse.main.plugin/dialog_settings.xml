@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf_web/百度登录业务关键字.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf/业务关键字.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.project.editor.activePage.public_rf_api">
+		<item value="LibrariesProjectConfigurationEditorPart" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf_web/百度登录测试用例.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf_api/接口示例.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf/测试用例.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./public_rf/测试用例2.robot">
+		<item value="" key="activePage"/>
+	</section>
+	<section name="org.robotframework.ide.project.editor.activePage.public_rf_web">
+		<item value="LibrariesProjectConfigurationEditorPart" key="activePage"/>
+	</section>
+</section>

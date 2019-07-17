@@ -1,0 +1,22 @@
+package com.lemon;
+
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class IETester {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		/*
+		 * ie浏览器要设置保护模式、缩放设置100%，是在客户端设置
+		 */
+		
+		System.setProperty("webdriver.ie.driver", "src/IEDriverServer.exe");
+		InternetExplorerDriver driver = new InternetExplorerDriver();
+		
+		Thread.sleep(5);
+		driver.quit();
+		
+		
+	}
+
+}

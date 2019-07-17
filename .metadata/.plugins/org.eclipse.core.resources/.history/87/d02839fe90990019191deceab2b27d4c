@@ -1,0 +1,15 @@
+package com.lemon;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirefoxTest {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.firefox.bin", "D:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		FirefoxDriver driver = new FirefoxDriver();
+		
+
+	}
+
+}

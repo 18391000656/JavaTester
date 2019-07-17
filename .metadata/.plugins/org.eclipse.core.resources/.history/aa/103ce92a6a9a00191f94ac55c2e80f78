@@ -1,0 +1,10 @@
+package com.lemen;
+
+public class Register_tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

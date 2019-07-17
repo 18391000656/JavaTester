@@ -1,0 +1,110 @@
+package com.lemen;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+public class Register_tester {
+
+	public static <NameValuePair> void main(String[] args) throws ClientProtocolException, IOException {
+		
+		/*
+		 * get请求
+		 */
+		//接口自动化---》第三方库、工具（httpclient）
+		/*
+		 * 发包要准备什么？？？
+		 *      1.请求连接、接口地址：http://120.78.128.25:8080/futureloan/mvc/api/member/register
+		 *      2.请求参数:mobilephone=18888888888,pwd=123456,regname=tom
+		 *      3.请求方式：post、get
+		 *      4.调用工具进行发包--》发数据包、发起一个请求  
+		 *      5.响应--》把返回的数据提取出来
+		 *      6.断言--》判断--》看最后的结果是否符合预期的结果--》如果符合，测试通过，否则，测试不通过
+		 */
+
+		
+//		1.请求连接、接口地址：http://120.78.128.25:8080/futureloan/mvc/api/member/register
+		
+		String url = "http://120.78.128.25:8080/futureloan/mvc/api/member/register";
+		
+//		2.请求参数:mobilephone=18888888888,pwd=123456,regname=tom
+
+		url += "mobilephone=18888888888&pwd=123456&regname=tom";
+		
+//	    3.请求方式：post、get---》封装成一个get请求
+//		1)如果是get请求？？？
+		HttpGet get = new HttpGet(url);
+//	    4.调用工具进行发包--》发数据包、发起一个请求  
+        //需要一个客户端发包
+		HttpClient httpClient = HttpClients.createDefault();
+		//执行请求
+		httpClient.execute(get);
+		HttpResponse response = httpClient.execute(get);
+		
+//	    5.响应--》把返回的数据提取出来
+		//响应体这个对象中间就有携带的数据
+		String result = EntityUtils.toString(response.getEntity());
+		
+//      6.断言--》判断--》看最后的结果是否符合预期的结果--》如果符合，测试通过，否则，测试不通过
+		System.out.println(result);
+		
+		
+		
+		
+		/*
+		 * post请求
+		 */
+		//接口自动化---》第三方库、工具（httpclient）
+		/*
+		 * 发包要准备什么？？？
+		 *      1.请求连接、接口地址：http://120.78.128.25:8080/futureloan/mvc/api/member/register
+		 *      2.请求参数:mobilephone=18888888888,pwd=123456,regname=tom
+		 *      3.请求方式：post、get
+		 *      4.调用工具进行发包--》发数据包、发起一个请求  
+		 *      5.响应--》把返回的数据提取出来
+		 *      6.断言--》判断--》看最后的结果是否符合预期的结果--》如果符合，测试通过，否则，测试不通过
+		 */
+
+		
+//		1.请求连接、接口地址：http://120.78.128.25:8080/futureloan/mvc/api/member/register
+		
+		String URL = "http://120.78.128.25:8080/futureloan/mvc/api/member/register";
+		
+//	    3.请求方式：post、get---》封装成一个get请求
+		HttpPost post = new HttpPost(URL);
+		
+//		2.请求参数:mobilephone=18888888888,pwd=123456,regname=tom
+        //post请求参数写在请求体中间
+		List<NameValuePair> parameters = new ArrayList<>();
+		//添加多个参数(参数设置到请求体中)
+		parameters.add(new BasicNameValuePair("mobilephone", "18888888888"));
+		parameters.add(new BasicNameValuePair("pwd", "123456"));
+		parameters.add(new BasicNameValuePair("regname", "tom"));
+		
+		post.setEntity(new UrlEncodedFormEntity(parameters));
+//	    4.调用工具进行发包--》发数据包、发起一个请求  
+        //需要一个客户端发包
+		HttpClient httpclient = HttpClients.createDefault();
+		//执行请求
+		httpClient.execute(post);
+		HttpResponse Response = httpClient.execute(post);
+		
+//	    5.响应--》把返回的数据提取出来
+		//响应体这个对象中间就有携带的数据
+		String Result = EntityUtils.toString(Response.getEntity());
+		
+//      6.断言--》判断--》看最后的结果是否符合预期的结果--》如果符合，测试通过，否则，测试不通过
+		System.out.println(Result);
+	}
+
+}

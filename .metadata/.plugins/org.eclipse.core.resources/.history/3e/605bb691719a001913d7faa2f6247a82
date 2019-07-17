@@ -1,0 +1,17 @@
+*** Settings ***
+Library    DateTime      
+
+*** Test Cases ***
+��ӡhell world
+    Log    hell world  
+    
+��ӡ��ǰʱ��
+    ${date}=    Get Current Date    
+    Log    ${date}        
+    
+case01
+    Log    hello world 
+����
+    Log    1111 
+的
+    Log    1111       

@@ -1,0 +1,20 @@
+package com.lemon;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirefoxTest {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "src/geckodriver.exe");
+		FirefoxDriver driver = new FirefoxDriver();
+		
+		/*
+		 * 本机电脑火狐版本比较高，暂时不行
+		 */
+		//selenium2.x的不需要驱动     
+		//selenium3.x的需要驱动
+
+	}
+
+}
