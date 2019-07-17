@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190629 21:57:48.396" rpa="false">
+<suite id="s1" name="Public Rf Api" source="D:\eclipse-workspace\public_rf_api">
+<suite id="s1-s1" name="接口示例" source="D:\eclipse-workspace\public_rf_api\接口示例.robot">
+<test id="s1-s1-t1" name="获取天气-Get请求-示例">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>douban</arg>
+<arg>https://api.yonyoucloud.com</arg>
+</arguments>
+<msg timestamp="20190629 21:57:48.606" level="INFO">Creating Session using : alias=douban, url=https://api.yonyoucloud.com, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20190629 21:57:48.605" endtime="20190629 21:57:48.607"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>city=深圳</arg>
+</arguments>
+<assign>
+<var>${req_data}</var>
+</assign>
+<msg timestamp="20190629 21:57:48.608" level="INFO">${req_data} = {'city': '深圳'}</msg>
+<status status="PASS" starttime="20190629 21:57:48.607" endtime="20190629 21:57:48.608"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>douban</arg>
+<arg>/apis/dst/weatherResearch/weatherCurrent</arg>
+<arg>params=${req_data}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20190629 21:57:48.883" level="INFO">Get Request using : alias=douban, uri=/apis/dst/weatherResearch/weatherCurrent, headers=None json=None</msg>
+<msg timestamp="20190629 21:57:48.884" level="INFO">D:\Python3\Lib\site-packages\urllib3\connectionpool.py:851: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20190629 21:57:48.884" level="INFO">${resp} = &lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20190629 21:57:48.608" endtime="20190629 21:57:48.885"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp}</arg>
+</arguments>
+<msg timestamp="20190629 21:57:48.888" level="INFO">&lt;Response [500]&gt;</msg>
+<status status="PASS" starttime="20190629 21:57:48.886" endtime="20190629 21:57:48.888"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+</arguments>
+<msg timestamp="20190629 21:57:48.892" level="INFO">500</msg>
+<status status="PASS" starttime="20190629 21:57:48.889" endtime="20190629 21:57:48.893"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.text}</arg>
+</arguments>
+<msg timestamp="20190629 21:57:48.897" level="INFO">{'status':'-1', 'msg':'errcode:300001,errormsg:Missing apicode'}</msg>
+<status status="PASS" starttime="20190629 21:57:48.894" endtime="20190629 21:57:48.898"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:57:48.604" endtime="20190629 21:57:48.899" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190629 21:57:48.465" endtime="20190629 21:57:48.902"></status>
+</suite>
+<status status="PASS" starttime="20190629 21:57:48.436" endtime="20190629 21:57:48.910"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Public Rf Api">Public Rf Api</stat>
+<stat pass="1" fail="0" id="s1-s1" name="接口示例">Public Rf Api.接口示例</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

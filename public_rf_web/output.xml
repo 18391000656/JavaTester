@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190629 21:44:05.942" rpa="false">
+<suite id="s1" name="Public Rf Web" source="D:\eclipse-workspace\public_rf_web">
+<suite id="s1-s1" name="百度登录测试用例" source="D:\eclipse-workspace\public_rf_web\百度登录测试用例.robot">
+<test id="s1-s1-t1" name="百度登录">
+<kw name="打开谷歌浏览器并访问百度首页" library="百度登录业务关键字">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.baidu.com</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20190629 21:44:06.210" level="INFO">Opening browser 'Chrome' to base url 'http://www.baidu.com'.</msg>
+<status status="PASS" starttime="20190629 21:44:06.210" endtime="20190629 21:44:12.628"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20190629 21:44:17.631" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190629 21:44:12.628" endtime="20190629 21:44:17.632"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:44:06.209" endtime="20190629 21:44:17.632"></status>
+</kw>
+<kw name="点击登录链接" library="百度登录业务关键字">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="u1"]//*[@name="tj_login"]</arg>
+</arguments>
+<msg timestamp="20190629 21:44:17.634" level="INFO">Clicking element 'xpath=//*[@id="u1"]//*[@name="tj_login"]'.</msg>
+<status status="PASS" starttime="20190629 21:44:17.633" endtime="20190629 21:44:17.738"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190629 21:44:19.742" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190629 21:44:17.739" endtime="20190629 21:44:19.742"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:44:17.633" endtime="20190629 21:44:19.742"></status>
+</kw>
+<kw name="点击用用户名按钮" library="百度登录业务关键字">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=TANGRAM__PSP_10__footerULoginBtn</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20190629 21:44:19.743" endtime="20190629 21:44:19.775"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=TANGRAM__PSP_10__footerULoginBtn</arg>
+</arguments>
+<msg timestamp="20190629 21:44:19.776" level="INFO">Clicking element 'id=TANGRAM__PSP_10__footerULoginBtn'.</msg>
+<status status="PASS" starttime="20190629 21:44:19.775" endtime="20190629 21:44:19.844"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:44:19.743" endtime="20190629 21:44:19.844"></status>
+</kw>
+<kw name="百度登录" library="百度登录业务关键字">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=TANGRAM__PSP_10__userName</arg>
+<arg>18391000656</arg>
+</arguments>
+<msg timestamp="20190629 21:44:19.846" level="INFO">Typing text '18391000656' into text field 'id=TANGRAM__PSP_10__userName'.</msg>
+<status status="PASS" starttime="20190629 21:44:19.845" endtime="20190629 21:44:20.076"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=TANGRAM__PSP_10__password</arg>
+<arg>645222zhangli.</arg>
+</arguments>
+<msg timestamp="20190629 21:44:20.077" level="INFO">Typing text '645222zhangli.' into text field 'id=TANGRAM__PSP_10__password'.</msg>
+<status status="PASS" starttime="20190629 21:44:20.077" endtime="20190629 21:44:20.283"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=TANGRAM__PSP_10__submit</arg>
+</arguments>
+<msg timestamp="20190629 21:44:20.284" level="INFO">Clicking button 'id=TANGRAM__PSP_10__submit'.</msg>
+<status status="PASS" starttime="20190629 21:44:20.283" endtime="20190629 21:44:20.401"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:44:19.844" endtime="20190629 21:44:20.402"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:44:06.208" endtime="20190629 21:44:20.402" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190629 21:44:06.014" endtime="20190629 21:44:20.403"></status>
+</suite>
+<status status="PASS" starttime="20190629 21:44:05.980" endtime="20190629 21:44:20.407"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Public Rf Web">Public Rf Web</stat>
+<stat pass="1" fail="0" id="s1-s1" name="百度登录测试用例">Public Rf Web.百度登录测试用例</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

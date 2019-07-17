@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190629 21:31:56.678" rpa="false">
+<suite id="s1" name="Public Rf" source="D:\eclipse-workspace\public_rf">
+<suite id="s1-s1" name="测试用例2" source="D:\eclipse-workspace\public_rf\测试用例2.robot">
+<test id="s1-s1-t1" name="调用我自己定义的关键字-与测试用例在同一个文件">
+<kw name="打开谷歌浏览器病访问百度首页" library="业务关键字">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>打开浏览器，输入http://www.baidu.com,进入百度首页</arg>
+</arguments>
+<msg timestamp="20190629 21:31:56.761" level="INFO">打开浏览器，输入http://www.baidu.com,进入百度首页</msg>
+<status status="PASS" starttime="20190629 21:31:56.760" endtime="20190629 21:31:56.761"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:31:56.759" endtime="20190629 21:31:56.761"></status>
+</kw>
+<kw name="输入用户名" library="业务关键字">
+<arguments>
+<arg>18391000656</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>百度登录用户名为:${username}</arg>
+</arguments>
+<msg timestamp="20190629 21:31:56.763" level="INFO">百度登录用户名为:18391000656</msg>
+<status status="PASS" starttime="20190629 21:31:56.762" endtime="20190629 21:31:56.763"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:31:56.762" endtime="20190629 21:31:56.764"></status>
+</kw>
+<status status="PASS" starttime="20190629 21:31:56.754" endtime="20190629 21:31:56.764" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190629 21:31:56.749" endtime="20190629 21:31:56.765"></status>
+</suite>
+<status status="PASS" starttime="20190629 21:31:56.714" endtime="20190629 21:31:56.766"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Public Rf">Public Rf</stat>
+<stat pass="1" fail="0" id="s1-s1" name="测试用例2">Public Rf.测试用例2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
